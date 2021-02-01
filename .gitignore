@@ -1,0 +1,12 @@
+node_modules
+.next
+build/
+out/
+.now
+.vercel
+public/storybook
+.env
+.env.local
+yarn-error.log
+tmp/
+.DS_Store
