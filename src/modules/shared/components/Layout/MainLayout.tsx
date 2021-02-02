@@ -7,13 +7,11 @@ import Footer from 'src/modules/shared/components/Footer/Footer'
 const px = [5, 5, 10]
 
 export interface MainLayoutProps {
-  theme?: 'light' | 'dark'
   hasFooter?: boolean
   maxW?: string
 }
 
 const MainLayout: React.FC<MainLayoutProps> = ({
-  theme = 'light',
   children,
   hasFooter = true,
   maxW = '2100px'
@@ -37,14 +35,23 @@ const MainLayout: React.FC<MainLayoutProps> = ({
           bgColor={navBgColor}
           color={color}
         />
-        <Flex direction="column" minH="calc(100vh - 80px)" px={0} mx={0} pt={0}>
+        <Flex direction="column" minH="calc(100vh - 80px)" px={0} mx={0} pt="80px">
           <Box
             flexGrow={1}
             flexShrink={0}
           >
             {children}
           </Box>
-          {hasFooter && <Box as={Footer} flexGrow={0} flexShrink={0} px={px} />}
+          {hasFooter && (
+            <Box
+              as={Footer}
+              flexGrow={0}
+              flexShrink={0}
+              px={px}
+              bgColor={bgColor}
+              color={color}
+            />
+          )}
         </Flex>
       </Box>
     </Box>

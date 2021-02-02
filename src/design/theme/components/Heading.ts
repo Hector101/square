@@ -23,7 +23,7 @@ const sizes = {
 }
 
 const defaultProps = {
-  size: 'lg',
+  size: 'md',
 }
 
 const Heading = {

@@ -63,8 +63,7 @@ const colors = {
   black: '#000',
   white: '#fff',
   disabled: '#E0E2DF',
-  primary: '#F20587',
-  primaryLight: '#0062FF',
+  primary: '#0062FF',
   secondary: '#14141b',
   secondaryLight: '#1c1d25',
   textPrimary: '#44444F',
@@ -86,8 +85,6 @@ const shadows = {
   inner: 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
   topNavShadow: 'inset 0px -1px 0px #E2E2EA',
   topNavShadowDarkMode: 'inset 0px -1px 0px #292932',
-  addressBlockShadow:
-    '1px 0 1px rgba(0, 0, 0, 0.2), -1px 0 1px rgba(0, 0, 0, 0.19)',
   none: 'none',
 }
 
@@ -103,7 +100,6 @@ const zIndices = {
   overlay: 1300,
   modal: 1400,
   popover: 1500,
-  skipLink: 1600,
   toast: 1700,
   tooltip: 1800,
 }

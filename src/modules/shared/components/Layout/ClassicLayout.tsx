@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react'
+import { Box, useColorMode } from '@chakra-ui/react'
 import React from 'react'
 
 import ClassicTopNav from 'src/modules/shared/components/TopNav/ClassicTopNav'
@@ -16,9 +16,13 @@ const ClassicLayout: React.FC<ClassicLayoutProps> = ({
   hasFooter = true,
   hasBorder,
 }) => {
+  const { colorMode } = useColorMode()
   return (
     <Box minHeight="100vh" bgColor={bgColor || 'offwhite'} color="textPrimary">
-      <ClassicTopNav hasBorder={hasBorder} />
+      <ClassicTopNav
+        hasBorder={hasBorder}
+        theme={colorMode}
+      />
       {children}
       {hasFooter && <Footer />}
     </Box>

@@ -6,8 +6,6 @@ const Footer = () => {
     <>
       <Box
         width="100%"
-        bg="secondary"
-        color="offwhite"
         py={6}
         px={5}
       >

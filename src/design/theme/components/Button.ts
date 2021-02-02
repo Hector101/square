@@ -1,6 +1,6 @@
 const defaultProps = {
   variant: 'primary',
-  size: 'md',
+  size: 'sm',
 }
 
 export const Button = {
@@ -34,12 +34,14 @@ export const Button = {
   },
   variants: {
     primary: {
-      width: '100%',
-      minWidth: [null, null, '120px'],
+      minWidth: [null, null, '80px'],
       bg: 'primary',
-      color: 'offwhite',
+      py: 3,
+      px: 4,
+      borderRadius: '15px',
+      color: 'white',
       _hover: {
-        bgColor: 'primaryLight',
+        bgColor: 'primary',
       },
       _disabled: {
         bgColor: 'disabled',
@@ -58,7 +60,7 @@ export const Button = {
       _hover: {
         bg: 'secondaryLight',
         color: 'textPrimary',
-        border: 'primaryLight',
+        border: 'primary',
       },
       _disabled: {
         bg: 'disabled',
@@ -68,19 +70,19 @@ export const Button = {
     },
 
     outline: {
-      width: '100%',
-      minWidth: [null, null, '190px'],
+      minWidth: [null, null, '80px'],
+      py: 3,
+      px: 4,
       bg: 'transparent',
-      border: 'primary',
-      color: 'buttonText',
-      _hover: {
-        bg: 'primary',
-        color: 'whiteSands',
-      },
+      borderRadius: '15px',
+      border: '1px',
+      borderColor: 'primary',
+      color: 'primary',
       _disabled: {
-        border: 'disabled',
-        color: 'disabled',
-        bg: 'transparent',
+        bgColor: 'disabled',
+        color: 'textPrimary',
+        border: '1px',
+        borderColor: 'disabled'
       },
     },
 

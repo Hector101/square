@@ -6,7 +6,7 @@ const variants = {
   primary: {
     color: 'primary',
     _hover: {
-      color: 'primaryLight',
+      color: 'primary',
     },
     _disabled: {
       color: 'disabled',

@@ -12,10 +12,12 @@ const NavLogo = chakra('img', {
 
 type ClassicTopNavProps = {
   hasBorder?: boolean
+  theme: 'light' | 'dark'
 }
 
 const ClassicTopNav: React.FC<ClassicTopNavProps> = ({
   hasBorder = true,
+  theme,
 }) => {
   return (
     <Flex
@@ -23,8 +25,7 @@ const ClassicTopNav: React.FC<ClassicTopNavProps> = ({
       align="center"
       p={4}
       py={[4, 8]}
-      borderBottom={hasBorder ? '1px' : 'none'}
-      borderBottomColor="lightGray"
+      boxShadow={theme === "light" ? 'topNavShadow' : 'topNavShadowDarkMode'}
     >
       <Link href="/">
         <NavLogo src="/logo.png" />
